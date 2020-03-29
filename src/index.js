@@ -1278,16 +1278,14 @@ const digestProducts = (products, layout) => {
 
     for (const name of layout){
 
-        if (!name) {
-            lanes.push(undigestedProduct);
-        } else if (name === '100bp') {
+        if (name === '100bp') {
             // concat to make the ladder darker
             lanes.push(bpLadders['100'].concat(bpLadders['100']));
         } else if (name === '50bp') {
             // concat to make the ladder darker
             lanes.push(bpLadders['50'].concat(bpLadders['50']));
         } else if (enzymes[name] === undefined) {
-            throw new Error(`Did not recognize restriction digest enzyme ${name}`);
+            lanes.push(undigestedProduct);
         } else {
             const enzyme = enzymes[name];
             const reverseEnzyme = reverseCompEnzyme(enzyme);
