@@ -5,10 +5,10 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "NODE_ENV=test jest --config config/jest.config.js --detectOpenHandles --forceExit"
+    "test": "NODE_ENV=test jest --config config/jest.config.cjs --detectOpenHandles --forceExit"
   },
   "author": "",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {},
   "devDependencies": {
     "eslint": "^6.8.0",
