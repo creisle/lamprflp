@@ -1085,14 +1085,27 @@ const getPrimerLayout = (inputReaction) => {
     );
 
     if (temp.length < rxn.b1.length){
-        throw new Error('error in the primer input. primers do not align to the target in the expected format. please check the provided sequences');
+        throw new Error(
+            `error in the primer input. The primers should be non-overlapping in the following order: b2, b1, f1, f2.
+            The primer b1 does not fit between b2 and f2 (
+                b2:${b2match.index}-${b2match.index + rxn.b2.length},
+                f2:${f2match.index}-${f2match.index + rxn.f2.length},
+            ). please check the provided sequences`
+        );
     }
     var b1match = alignPrimer(temp, rxn.b1);
     b1match.index += b2match.index + rxn.b2.length;
     temp = rxn.target.substring(b1match.index + rxn.b1.length, f2match.index);
 
-    if (temp.length < rxn.b1.length){
-        throw new Error('error in the primer input. primers do not align to the target in the expected format. please check the provided sequences');
+    if (temp.length < rxn.f1.length){
+        throw new Error(
+            `error in the primer input. The primers should be non-overlapping in the following order: b2, b1, f1, f2.
+            The primer f1 does not fit between b1 and f2 (
+                b2:${b2match.index}-${b2match.index + rxn.b2.length},
+                b1:${b1match.index}-${b1match.index + rxn.b1.length},
+                f2:${f2match.index}-${f2match.index + rxn.f2.length},
+            ). please check the provided sequences`
+        );
     }
     var f1match = alignPrimer(temp, rxn.f1);
     f1match.index += b1match.index + rxn.b1.length;
