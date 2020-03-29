@@ -4,7 +4,7 @@ const {
     createAmplificationBlocks,
     getPrimerLayout,
     complementSeq
-} = require('../src');
+} = require('../src/index.js');
 
 const data = require('./data.json');
 

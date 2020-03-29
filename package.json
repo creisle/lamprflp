@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "description": "",
-  "main": "lamprflp/index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "NODE_ENV=test jest --config config/jest.config.js --detectOpenHandles --forceExit"
   },
