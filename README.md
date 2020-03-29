@@ -7,7 +7,13 @@ for the visual
 
 ## Getting Started
 
-This module can be used as a node module as follows
+Install from npm
+
+```bash
+npm install lamprflp
+```
+
+then this can be used in a node module as follows
 
 ```js
 const {createLampReaction} = require('lamprflp');
