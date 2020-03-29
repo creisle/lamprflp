@@ -1319,11 +1319,13 @@ const createLampReaction = (fastaContent, lanesLayout = ['100bp', '50bp', '']) =
     return {reaction, lanes, undigestedProduct: products.map(p => p.length).sort()};
 };
 
-module.exports = {
-    parseLampFasta,
-    createLampReaction,
-    createAmplificationBlocks,
-    amplifyBlocks,
-    getPrimerLayout,
-    complementSeq
-};
+try {
+    module.exports = {
+        parseLampFasta,
+        createLampReaction,
+        createAmplificationBlocks,
+        amplifyBlocks,
+        getPrimerLayout,
+        complementSeq
+    };
+} catch (err) {}
