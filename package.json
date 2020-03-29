@@ -8,7 +8,7 @@
     "test": "NODE_ENV=test jest --config config/jest.config.js --detectOpenHandles --forceExit"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "eslint": "^6.8.0",
