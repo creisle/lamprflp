@@ -93,7 +93,7 @@ describe('createLampReaction', () => {
     const {fragments} = data;
 
     beforeAll(() => {
-        const [
+        const {lanes: [
             ladder100,
             ladder50,
             undigested,
@@ -101,7 +101,7 @@ describe('createLampReaction', () => {
             BslI,
             HpaII,
             HinfI
-        ] = createLampReaction(defaultFasta, ['100bp', '50bp', '', 'RsaI', 'BslI', 'HpaII', 'HinfI']);
+        ]} = createLampReaction(defaultFasta, ['100bp', '50bp', '', 'RsaI', 'BslI', 'HpaII', 'HinfI']);
         result = {ladder100, ladder50, undigested, RsaI, BslI, HpaII, HinfI};
     });
 
