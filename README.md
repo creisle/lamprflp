@@ -1,5 +1,7 @@
 # LAMP RFLP
 
+[![npm version](https://badge.fury.io/js/lamprflp.svg)](https://www.npmjs.com/package/lamprflp)
+
 This is the JS module used by the site: http://creisle.github.io/creisle.lamprflp/
 
 This computes the lamp products from a FASTA input file and outputs the fragments required
