@@ -1278,10 +1278,10 @@ const digestProducts = (products, layout) => {
 
     for (const name of layout){
 
-        if (name === '100bp') {
+        if (name.startsWith('100 bp') || name.startsWith('100bp')) {
             // concat to make the ladder darker
             lanes.push(bpLadders['100'].concat(bpLadders['100']));
-        } else if (name === '50bp') {
+        } else if (name.startsWith('50bp') || name.startsWith('50 bp')) {
             // concat to make the ladder darker
             lanes.push(bpLadders['50'].concat(bpLadders['50']));
         } else if (enzymes[name] === undefined) {
