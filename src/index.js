@@ -468,7 +468,7 @@ const createLampReaction = (fastaContent, lanesLayout = ['100bp', '50bp', '']) =
     const blocks = createAmplificationBlocks(reaction, primerPositions);
     const products = amplifyBlocks(blocks);
     const lanes = digestProducts(products, lanesLayout);
-    return lanes;
+    return {reaction, lanes, undigestedProduct: products.map(p => p.length).sort()};
 };
 
 module.exports = {
