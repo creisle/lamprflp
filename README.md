@@ -10,7 +10,7 @@ for the visual
 This module can be used as a node module as follows
 
 ```js
-const {createLampReaction} = require('./src');
+const {createLampReaction} = require('lamprflp');
 
 const {lanes} = createLampReaction(`
 > b1
