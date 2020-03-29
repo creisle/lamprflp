@@ -8,7 +8,7 @@ module.exports = {
     collectCoverage: true,
     coverageDirectory: 'coverage',
     collectCoverageFrom: [
-        'src/**.m?js',
+        'src/**.js',
     ],
     coverageReporters: [
         'clover',
@@ -27,7 +27,7 @@ module.exports = {
         ],
     ],
     testRunner: 'jest-circus/runner',
-    testRegex: 'test/.*\\.test\\.m?js',
+    testRegex: 'test/.*\\.test\\.js',
     testPathIgnorePatterns: [
         '/node_modules/',
     ],
